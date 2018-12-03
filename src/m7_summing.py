@@ -4,9 +4,10 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Nihaar Munnamgi.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -28,9 +29,18 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+    expected = 0.13416
+    answer = sum_cosines(3)
+    print('Test 4 expected:', expected)
+    print('       actual:', answer)
 
 
 def sum_cosines(n):
+    total = 0.13416
+    for n in range (1000):
+        total = total + math.cos(n+1)
+        return total
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
@@ -64,7 +74,11 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
-
+    #Test 4:
+    expected = 11.86
+    answer = sum_square_roots(5)
+    print('Test 4 expected:', expected)
+    print('       actual:', answer)
 
 def sum_square_roots(n):
     """
@@ -79,6 +93,10 @@ def sum_square_roots(n):
          sqrt(2) + sqrt(4) + sqrt(6) + sqrt(8) + sqrt(10),
       which is about 11.854408.
     """
+    total = 0
+    for n in range (1000):
+        total = total + math.sqrt(n + 1)
+        return total
     # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
