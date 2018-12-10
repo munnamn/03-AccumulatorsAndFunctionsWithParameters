@@ -36,9 +36,9 @@ def run_test_sum_cosines():
 
 
 def sum_cosines(n):
-    total = 0.13416
-    for n in range (1000):
-        total = total + math.cos(n+1)
+    total = 0
+    for k in range (n + 1):
+        total = total + math.cos(k)
         return total
 
     """
@@ -94,9 +94,11 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     total = 0
-    for n in range (1000):
-        total = total + math.sqrt(n + 1)
-        return total
+    for k in range (n + 1):
+        if n % 2 == 0:
+            total = total + math.sqrt(n + 1)
+
+    return total
     # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).

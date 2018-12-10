@@ -94,11 +94,6 @@ def test():
     print('Test 4 expected:', expected)
     print('       actual:', answer)
 
-    #Test 4:
-    expected = 10
-    answer = sum_of_digits(136)
-    print('Test 4 expected:', expected)
-    print('       actual:', answer)
 
 def sum_of_digits(number):
     """
@@ -161,13 +156,31 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    #Test 1
     expected = 10
     answer = digits_in_cube(136)
+    print('Test 1 expected:', expected)
+    print('       actual:', answer)
+
+    #Test 2
+    expected = 10
+    answer = digits_in_cube(396)
+    print('Test 2 expected:', expected)
+    print('       actual:', answer)
+
+    #Test 3
+    expected = 10
+    answer = digits_in_cube(278)
+    print('Test 3 expected:', expected)
+    print('       actual:', answer)
+
+    #Test 4
+    expected = 10
+    answer = digits_in_cube(529)
     print('Test 4 expected:', expected)
     print('       actual:', answer)
 
 def digits_in_cube(n):
-    sum_of_digits()
     d = sum_of_digits(n**3)
 
 

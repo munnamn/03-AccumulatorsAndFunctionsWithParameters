@@ -63,7 +63,10 @@ def draw_circles1():
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
 
-    window = rg.RoseWindow
+window = rg.RoseWindow(400,400)
+
+
+
 
 def print_sequence2():
     """
